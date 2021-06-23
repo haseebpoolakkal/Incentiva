@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AdminChangeSalary">
+
+    <RelativeLayout
+        android:id="@+id/salary_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/toolbar_design_primary"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/salary_back_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_arrow_back_white_24dp" />
+
+
+        <TextView
+            android:id="@+id/salary_toolbar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/salary_back_button"
+            android:text="@string/change_salary"
+            android:textColor="@color/toolbar_text"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/salary_toolbar">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/salary_container"
+                android:layout_margin="10dp"
+                android:padding="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:id="@+id/salary_spinner_layout">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/salary_old_text"
+                        android:layout_alignParentRight="true"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_color_bg"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"/>
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/salary_spinner"
+                        android:layout_toLeftOf="@id/salary_old_text"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/salary_input_layout"
+                    android:layout_margin="5dp"
+                    android:layout_below="@id/salary_spinner_layout">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/salary_new"
+                        android:hint="@string/new_salary"
+                        android:inputType="number"
+                        android:textColor="@color/edit_text_color"/>
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/salary_change_button"
+                    android:text="@string/change"
+                    android:textColor="@color/button_text"
+                    android:background="@drawable/button_design"
+                    android:layout_below="@id/salary_input_layout"
+                    android:layout_marginTop="30dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/salary_progress"
+                    android:layout_below="@id/salary_change_button"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

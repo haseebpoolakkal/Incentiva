@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "716481009247",
+    "firebase_url": "https://kaniyadath-65d0c.firebaseio.com",
+    "project_id": "kaniyadath-65d0c",
+    "storage_bucket": "kaniyadath-65d0c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716481009247:android:5052aa4f7a25f0df772dea",
+        "android_client_info": {
+          "package_name": "com.azetech.insentiva"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "716481009247-t8pg5moh4qhjvj63kbf4pk2042bd41ef.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.azetech.insentiva",
+            "certificate_hash": "e0dceff31b73872eafe7b7d5b0be7db00ab3ec19"
+          }
+        },
+        {
+          "client_id": "716481009247-3brldk56dlot235e7th5qu3mvlicmgmr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEhc5CDkhpboPROVUX0__L55iyTJ53NJg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "716481009247-3brldk56dlot235e7th5qu3mvlicmgmr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

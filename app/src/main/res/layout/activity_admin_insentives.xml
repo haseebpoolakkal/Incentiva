@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AdminInsentives">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/inst_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/colorPrimary"
+        app:srcCompat="@drawable/ic_add_black_24dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/inct_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabTextColor="@color/tab_deselected"
+            app:tabSelectedTextColor="@color/tab_selected"
+            app:tabIndicatorColor="@color/tab_deselected"
+            android:background="@color/colorPrimary">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/inct_tab1"
+                android:layout_width="wrap_content"
+                android:text="@string/ledger"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/inct_tab2"
+                android:text="@string/today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/inct_tab3"
+                android:text="@string/month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/inct_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/inct_tab_layout"
+            android:background="@color/white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

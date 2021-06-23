@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/logo_bg_color"
+    android:id="@+id/splash_screen_layout"
+    tools:context=".Splash">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/splash_screen_logo_container">
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/logo_layout"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_right_triangle_white_24dp"
+                    android:rotation="180"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/logo_left"/>
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_right_triangle_24dp"
+                    android:rotation="90"
+                    android:layout_marginLeft="70dp"
+                    android:id="@+id/logo_right"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/slash_text_layout"
+                android:layout_marginTop="50dp"
+                android:layout_below="@id/logo_layout"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/splash_text1"
+                    android:src="@drawable/kaniyadath_logo_text"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/splash_error_text_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/splash_screen_logo_container">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/t1"
+                android:layout_centerHorizontal="true"
+                android:text="Server is Under Maintenance, Please wait for Sometime."
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:textColor="@color/text_color_primary"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/t2"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/t1"
+                android:text="We are sorry for your inconvenience."
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:textColor="@color/text_color_primary"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

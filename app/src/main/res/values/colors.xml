@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#1F4221</color>
+    <color name="colorPrimary">#1F4221</color>
+    <color name="colorPrimaryDark">#1F4221</color>
+    <color name="colorAccent">#45944A</color>
+    <color name="touch_pressed">#EEEBEB</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="text_color_primary">#FFFFFF</color>
+    <color name="text_color_bg">#000000</color>
+    <color name="text_color_accent">#45944A</color>
+    <color name="edit_text_color">#000000</color>
+    <color name="bottom_nav">#ffffff</color>
+    <color name="toolbar_text">#FFFFFF</color>
+    <color name="button_text">#FFFFFF</color>
+    <color name="tab_selected">#FFFFFF</color>
+    <color name="tab_deselected">#DDDADA</color>
+    <color name="logo_bg_color">#1F4221</color>
+
+    <color name="editText_color">#36713A</color>
+
+    <color name="card_light_grey">#FAF9F9</color>
+    <color name="card_shine_center">#FFFFFF</color>
+    <color name="card_shine_sides">#FAF9F9</color>
+</resources>

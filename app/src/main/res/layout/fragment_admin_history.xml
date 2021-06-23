@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AdminHistory">
+
+    <RelativeLayout
+        android:id="@+id/admin_history_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/toolbar_design_primary"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/history"
+            android:textColor="@color/toolbar_text"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/admin_history_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/admin_history_toolbar"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/admin_history_heading_layout">
+            <TextView
+                android:id="@+id/admin_history_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/today"
+                android:textColor="@color/text_color_bg"
+                android:textSize="18dp"
+                android:layout_centerVertical="true"
+                android:textStyle="bold" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/admin_home_history_left_swipe_layout"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/admin_history_heading">
+
+                <TextView
+                    android:id="@+id/admin_history_previous_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/swipe"
+                    android:layout_toRightOf="@id/admin_home_history_left_swipe"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/text_color_bg"
+                    android:textSize="12dp"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/admin_home_history_left_swipe"
+                    android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/admin_home_history_right_swipe_layout"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp">
+
+                <TextView
+                    android:id="@+id/admin_history_next_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/swipe"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/text_color_bg"
+                    android:textSize="12dp"/>
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_toRightOf="@id/admin_history_next_page"
+                    android:id="@+id/admin_home_history_right_swipe"
+                    android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/admin_history_Tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/admin_history_heading_layout"
+            android:background="@color/white">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/history_tab1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/history_tab2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/history_tab3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/admin_history_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/admin_history_heading_layout"
+            android:background="@color/white" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".AdminHomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/admin_home_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/toolbar_design_primary"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/home"
+            android:textColor="@color/toolbar_text"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@id/admin_home_toolbar">
+
+
+        <RelativeLayout
+            android:id="@+id/admin_home_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/admin_home_main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@drawable/view_design_primary"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/admin_home_main_total_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/admin_home_main_today"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color_primary"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        tools:text="4862.5" />
+
+                    <TextView
+                        android:id="@+id/home_main_text_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/admin_home_main_today"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/today"
+                        android:textColor="@color/text_color_accent"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/admin_home_main_side_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="30dp"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/admin_home_main_month_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true">
+
+                        <TextView
+                            android:id="@+id/admin_home_main_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@color/text_color_primary"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            tools:text="1500" />
+
+                        <TextView
+                            android:id="@+id/admin_home_main_month_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/admin_home_main_month"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/month"
+                            android:textColor="@color/text_color_accent"
+                            android:textSize="12dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/admin_home_main_employee_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true">
+
+                        <LinearLayout
+                            android:id="@+id/admin_home_main_employee_absence_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true">
+
+                            <TextView
+                                android:id="@+id/admin_home_main_employee_absence"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/text_color_primary"
+                                android:textSize="15dp"
+                                android:textStyle="bold"
+                                tools:text="15" />
+
+                            <TextView
+                                android:id="@+id/admin_home_main_employee_slash"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="/"
+                                android:textColor="@color/text_color_primary"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/admin_home_main_employee_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/text_color_primary"
+                                android:textSize="15dp"
+                                android:textStyle="bold"
+                                tools:text="150" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/admin_home_main_employee_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/admin_home_main_employee_absence_layout"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/employee"
+                            android:textColor="@color/text_color_accent"
+                            android:textSize="12dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/admin_home_selectors_layout"
+                android:layout_below="@id/admin_home_main_layout"
+                android:background="@drawable/view_design_primary"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:id="@+id/admjn_home_add_incentive">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/card1"
+                                android:background="@color/white"
+                                app:cardCornerRadius="20dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_assignment_black_24dp"
+                                    android:layout_gravity="center"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/card1"
+                                android:text="Incentives"
+                                android:layout_marginTop="3dp"
+                                android:textColor="@color/text_color_accent"
+                                android:layout_centerHorizontal="true"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/admjn_home_edit_incentive"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@id/admjn_home_add_incentive">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/card2"
+                                android:background="@color/white"
+                                app:cardCornerRadius="20dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_edit_type_24dp"
+                                    android:layout_gravity="center"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/card2"
+                                android:text="Incentive Type"
+                                android:layout_marginTop="3dp"
+                                android:textColor="@color/text_color_accent"
+                                android:layout_centerHorizontal="true"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:id="@+id/admjn_home_change_salary"
+                            android:layout_toRightOf="@id/admjn_home_edit_incentive">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/card3"
+                                android:background="@color/white"
+                                app:cardCornerRadius="20dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_monetization_on_black_24dp"
+                                    android:layout_gravity="center"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/card3"
+                                android:text="Salary"
+                                android:layout_marginTop="3dp"
+                                android:textColor="@color/text_color_accent"
+                                android:layout_centerHorizontal="true"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/admjn_home_attendance"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@id/admjn_home_change_salary">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/card4"
+                                android:background="@color/white"
+                                app:cardCornerRadius="20dp">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_edit_black_24dp"
+                                    android:layout_gravity="center"/>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/card4"
+                                android:text="Attendance"
+                                android:layout_marginTop="3dp"
+                                android:textColor="@color/text_color_accent"
+                                android:layout_centerHorizontal="true"/>
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                </HorizontalScrollView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/admin_home_chart_layout"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/admin_home_selectors_layout"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/view_design_primary"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/admin_home_chart_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Incentive Bar Chart"
+                    android:textColor="@color/text_color_accent" />
+
+                <lecho.lib.hellocharts.view.LineChartView
+                    android:id="@+id/admin_home_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/admin_home_chart_heading" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

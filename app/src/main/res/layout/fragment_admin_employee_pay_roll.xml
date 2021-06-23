@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminEmployeePayRoll">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/ledger_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/ledger_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="name"
+                android:textColor="@color/text_color_bg"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ledger_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/ledger_heading"
+                android:textColor="@color/text_color_bg"
+                android:textSize="18dp"
+                tools:text="January" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ledger_data_container"
+                android:layout_below="@id/ledger_heading"
+                android:padding="10dp"
+                android:background="@drawable/view_border_primary">
+
+                <RelativeLayout
+                    android:id="@+id/ledger_salary_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/ledger_salary_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/salary"
+                        android:textColor="@color/text_color_bg"
+                        android:textSize="15dp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp">
+
+                        <TextView
+                            android:id="@+id/ledger_salary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/text_color_bg"
+                            android:textSize="15dp"
+                            tools:text="15000" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ledger_incentive_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ledger_salary_layout"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/ledger_incentive_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_incentive"
+                        android:textColor="@color/text_color_bg"
+                        android:textSize="15dp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp">
+
+                        <TextView
+                            android:id="@+id/ledger_incentive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/text_color_bg"
+                            android:textSize="15dp"
+                            tools:text="15000" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <View
+                    android:id="@+id/ledger_line_1"
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/ledger_incentive_layout"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/black" />
+
+                <RelativeLayout
+                    android:id="@+id/ledger_total_payable_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ledger_line_1"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/ledger_total_payable_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total"
+                        android:textColor="@color/text_color_bg"
+                        android:textSize="15dp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp">
+
+                        <TextView
+                            android:id="@+id/ledger_total_payable"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/text_color_bg"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            tools:text="15000" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ledger_attendance_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ledger_total_payable_layout"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/ledger_attendance_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/attendance"
+                        android:textColor="@color/text_color_bg"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/ledger_attendance_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_toRightOf="@id/ledger_attendance_text"
+                        android:textColor="@color/text_color_bg"
+                        android:textSize="15dp"
+                        tools:text="X29" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp">
+
+                        <TextView
+                            android:id="@+id/ledger_attendance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/text_color_bg"
+                            android:textSize="15dp"
+                            tools:text="15000" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/ledger_line_2"
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/ledger_attendance_layout"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/black" />
+
+                <RelativeLayout
+                    android:id="@+id/ledger_total_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ledger_line_2"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/ledger_total_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total"
+                        android:textColor="@color/text_color_bg"
+                        android:textSize="15dp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp">
+
+                        <TextView
+                            android:id="@+id/ledger_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@color/text_color_bg"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            tools:text="15000" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ledger_payed_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ledger_total_layout"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/ledger_payed_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/payed"
+                        android:textColor="@color/text_color_bg"
+                        android:textSize="15dp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp">
+
+                        <TextView
+                            android:id="@+id/ledger_payed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/text_color_bg"
+                            android:textSize="15dp"
+                            tools:text="15000" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+                <View
+                    android:id="@+id/ledger_line_3"
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/ledger_payed_layout"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/black" />
+
+                <RelativeLayout
+                    android:id="@+id/ledger_total_balance_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ledger_line_3"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/ledger_total_balance_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total"
+                        android:textColor="@color/text_color_bg"
+                        android:textSize="15dp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp">
+
+                        <TextView
+                            android:id="@+id/ledger_total_balance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@color/text_color_bg"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            tools:text="15000" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ledger_balance_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ledger_total_balance_layout"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/ledger_balance_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/balance"
+                        android:textColor="@color/text_color_bg"
+                        android:textSize="15dp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp">
+
+                        <TextView
+                            android:id="@+id/ledger_balance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/text_color_bg"
+                            android:textSize="15dp"
+                            tools:text="15000" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/ledger_line_4"
+                    android:layout_width="100dp"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/ledger_balance_layout"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/black" />
+
+                <RelativeLayout
+                    android:id="@+id/ledger_grand_total_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ledger_line_4"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/ledger_grand_total_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/grand_total"
+                        android:textColor="@color/text_color_bg"
+                        android:textSize="15dp" />
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:layout_toLeftOf="@id/ledger_total_image_layout">
+
+                        <TextView
+                            android:id="@+id/ledger_grand_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/text_color_bg"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            tools:text="15000" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ledger_total_image_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:id="@+id/ledger_money_error"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_error_black_24dp" />
+
+                        <ImageView
+                            android:id="@+id/ledger_money_ok"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_check_black_24dp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+<!--               Starting Progress layout-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ledger_progress_container"
+                    android:visibility="gone"
+                    android:layout_below="@id/ledger_heading"
+                    android:padding="10dp"
+                    android:background="@drawable/view_border_primary">
+
+                    <RelativeLayout
+                        android:id="@+id/ledger_progress_layout_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/ledger_salary_progress_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/salary"
+                            android:textColor="@color/text_color_bg"
+                            android:textSize="15dp" />
+
+                        <RelativeLayout
+                            android:id="@+id/payroll_anim_progress_1"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/shine_background">
+
+                            <ImageView
+                                android:id="@+id/payroll_shine_progress_1"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="-50dp"
+                                android:layout_marginTop="-20dp"
+                                android:rotation="30"
+                                android:src="@drawable/shine" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ledger_progress_layout_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ledger_progress_layout_1"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/ledger_incentive_progress_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_incentive"
+                            android:textColor="@color/text_color_bg"
+                            android:textSize="15dp" />
+
+                        <RelativeLayout
+                            android:id="@+id/payroll_anim_progress_2"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/shine_background">
+
+                            <ImageView
+                                android:id="@+id/payroll_shine_progress_2"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="-50dp"
+                                android:layout_marginTop="-20dp"
+                                android:rotation="30"
+                                android:src="@drawable/shine" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:id="@+id/ledger_progress_line_1"
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/ledger_progress_layout_2"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/black" />
+
+                    <RelativeLayout
+                        android:id="@+id/ledger_progress_layout_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ledger_progress_line_1"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/ledger_total_payable_progress_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total"
+                            android:textColor="@color/text_color_bg"
+                            android:textSize="15dp" />
+
+                        <RelativeLayout
+                            android:id="@+id/payroll_anim_progress_3"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/shine_background">
+
+                            <ImageView
+                                android:id="@+id/payroll_shine_progress_3"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="-50dp"
+                                android:layout_marginTop="-20dp"
+                                android:rotation="30"
+                                android:src="@drawable/shine" />
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ledger_progress_layout_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ledger_progress_layout_3"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/ledger_attendance_progress_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/attendance"
+                            android:textColor="@color/text_color_bg"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/ledger_attendance_progress_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_toRightOf="@id/ledger_attendance_progress_text"
+                            android:textColor="@color/text_color_bg"
+                            android:textSize="15dp"
+                            tools:text="X29" />
+
+                        <RelativeLayout
+                            android:id="@+id/payroll_anim_progress_4"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/shine_background">
+
+                            <ImageView
+                                android:id="@+id/payroll_shine_progress_4"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="-50dp"
+                                android:layout_marginTop="-20dp"
+                                android:rotation="30"
+                                android:src="@drawable/shine" />
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/ledger_line_progress_2"
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/ledger_progress_layout_4"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/black" />
+
+                    <RelativeLayout
+                        android:id="@+id/ledger_progress_layout_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ledger_line_progress_2"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/ledger_total_progress_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total"
+                            android:textColor="@color/text_color_bg"
+                            android:textSize="15dp" />
+
+                        <RelativeLayout
+                            android:id="@+id/payroll_anim_progress_5"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/shine_background">
+
+                            <ImageView
+                                android:id="@+id/payroll_shine_progress_5"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="-50dp"
+                                android:layout_marginTop="-20dp"
+                                android:rotation="30"
+                                android:src="@drawable/shine" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ledger_progress_layout_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ledger_progress_layout_5"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/ledger_payed_progress_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/payed"
+                            android:textColor="@color/text_color_bg"
+                            android:textSize="15dp" />
+
+                        <RelativeLayout
+                            android:id="@+id/payroll_anim_progress_6"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/shine_background">
+
+                            <ImageView
+                                android:id="@+id/payroll_shine_progress_6"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="-50dp"
+                                android:layout_marginTop="-20dp"
+                                android:rotation="30"
+                                android:src="@drawable/shine" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:id="@+id/ledger_line_progress_3"
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/ledger_progress_layout_6"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/black" />
+
+                    <RelativeLayout
+                        android:id="@+id/ledger_progress_layout_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ledger_line_progress_3"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/ledger_total_balance_progress_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total"
+                            android:textColor="@color/text_color_bg"
+                            android:textSize="15dp" />
+
+                        <RelativeLayout
+                            android:id="@+id/payroll_anim_progress_7"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/shine_background">
+
+                            <ImageView
+                                android:id="@+id/payroll_shine_progress_7"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="-50dp"
+                                android:layout_marginTop="-20dp"
+                                android:rotation="30"
+                                android:src="@drawable/shine" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ledger_progress_layout_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ledger_progress_layout_7"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/ledger_balance_progress_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/balance"
+                            android:textColor="@color/text_color_bg"
+                            android:textSize="15dp" />
+
+                        <RelativeLayout
+                            android:id="@+id/payroll_anim_progress_8"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/shine_background">
+
+                            <ImageView
+                                android:id="@+id/payroll_shine_progress_8"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="-50dp"
+                                android:layout_marginTop="-20dp"
+                                android:rotation="30"
+                                android:src="@drawable/shine" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/ledger_line_progress_4"
+                        android:layout_width="100dp"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/ledger_progress_layout_8"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/black" />
+
+                    <RelativeLayout
+                        android:id="@+id/ledger_progress_layout_9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ledger_line_progress_4"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/ledger_grand_total_progress_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/grand_total"
+                            android:textColor="@color/text_color_bg"
+                            android:textSize="15dp" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/payroll_anim_progress_9"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/shine_background">
+
+                            <ImageView
+                                android:id="@+id/payroll_shine_progress_9"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="-50dp"
+                                android:layout_marginTop="-20dp"
+                                android:rotation="30"
+                                android:src="@drawable/shine" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+<!--                Ending Progress Layout-->
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ledger_bottom_layout"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/ledger_pay_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <Button
+                android:id="@+id/ledger_pay_button"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_design"
+                android:text="@string/pay"
+                android:textColor="@color/button_text" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/ledger_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ledger_pay_button_layout"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

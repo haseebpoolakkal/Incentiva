@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AdminAddIncentiveType">
+
+    <RelativeLayout
+        android:id="@+id/add_type_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/toolbar_design_primary"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/add_type_back_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_arrow_back_white_24dp" />
+
+
+        <TextView
+            android:id="@+id/add_type_toolbar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/add_type_back_button"
+            android:text="@string/add_new_type"
+            android:textColor="@color/toolbar_text"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/add_type_toolbar">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/add_inct_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:padding="10dp">
+
+                <EditText
+                    android:id="@+id/add_type_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/add_type_name"
+                    android:textColor="@color/edit_text_color" />
+
+                <TextView
+                    android:id="@+id/add_type_spinner_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/add_type_name"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@id/add_type_spinner"
+                    android:text="@string/add_type_unit"
+                    android:textColor="@color/text_color_bg"
+                    android:textSize="16dp" />
+
+                <Spinner
+                    android:id="@+id/add_type_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/add_type_name"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp" />
+
+                <RelativeLayout
+                    android:id="@+id/add_type_value_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/add_type_spinner"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/add_type_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/edit_text_color" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/add_type_button"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/add_type_value_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/button_design"
+                    android:text="Add"
+                    android:textColor="@color/button_text" />
+
+                <ProgressBar
+                    android:id="@+id/add_type_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/add_type_button"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

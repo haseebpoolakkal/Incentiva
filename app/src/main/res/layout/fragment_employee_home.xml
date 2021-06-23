@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmployeeHomeFragment"
+    android:background="@color/colorPrimaryDark">
+
+    <RelativeLayout
+        android:id="@+id/employee_home_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/toolbar_design_primary"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/home"
+            android:textColor="@color/toolbar_text"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+        <RelativeLayout
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/employee_home_person_layout"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/person_bg">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_person_primary_24dp"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/employee_home_person_name"
+            android:layout_toLeftOf="@id/employee_home_person_layout"
+            android:textColor="@color/text_color_primary"
+            android:layout_centerVertical="true"
+            tools:text="name"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/employee_home_toolbar"
+        android:layout_marginBottom="45dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/employee_home_row_1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/employee_home_row_11"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/employee_home_grand_total_text"
+                            android:text="@string/grand_total"
+                            android:textColor="@color/text_color_accent"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/employee_home_grand_total"
+                            android:layout_below="@id/employee_home_grand_total_text"
+                            android:textColor="@color/text_color_primary"
+                            android:textStyle="bold"
+                            android:textSize="35dp"
+                            tools:text="200"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/employee_home_row_12"
+                        android:layout_below="@id/employee_home_row_11"
+                        android:layout_marginLeft="20dp"
+                        android:padding="10dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/employee_home_attendance_text"
+                            android:text="@string/attendance"
+                            android:textColor="@color/text_color_accent"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/employee_home_attendance"
+                            android:layout_below="@id/employee_home_attendance_text"
+                            android:textColor="@color/text_color_primary"
+                            android:textStyle="bold"
+                            android:textSize="35dp"
+                            tools:text="200"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/employee_logo_layout"
+                        android:layout_marginRight="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:padding="20dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_right_triangle_white_24dp"
+                            android:rotation="180"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/logo_left"/>
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_right_triangle_24dp"
+                            android:rotation="90"
+                            android:layout_marginLeft="20dp"
+                            android:id="@+id/logo_right"/>
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="20dp"
+                            android:id="@+id/splash_text1"
+                            android:layout_below="@id/logo_left"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/kaniyadath_logo_text"/>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/employee_home_row_2"
+                    android:layout_below="@id/employee_home_row_1"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/employee_home_total_inct_layout"
+                        android:layout_marginLeft="10dp"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/employee_home_total_inct_text"
+                            android:text="@string/incentive"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@color/text_color_accent"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/employee_home_total_inct"
+                            android:layout_below="@id/employee_home_total_inct_text"
+                            android:textColor="@color/text_color_primary"
+                            android:textStyle="bold"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="20dp"
+                            android:text="200"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/employee_home_total_salary_layout"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/employee_home_total_salary_text"
+                            android:text="@string/salary"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@color/text_color_accent"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/employee_home_total_salary"
+                            android:layout_below="@id/employee_home_total_salary_text"
+                            android:textColor="@color/text_color_primary"
+                            android:textStyle="bold"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="20dp"
+                            android:text="20"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:id="@+id/employee_home_row_3"
+                    android:layout_below="@id/employee_home_row_2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/employee_inct_chart_heading"
+                        tools:text="@string/incentive"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/text_color_accent"/>
+
+                    <lecho.lib.hellocharts.view.LineChartView
+                        android:id="@+id/employee_inct_chart"
+                        android:layout_below="@id/employee_inct_chart_heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:id="@+id/employee_home_row_4"
+                    android:layout_below="@id/employee_home_row_3"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/employee_pie_chart_heading"
+                        tools:text="@string/incentive"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/text_color_accent"/>
+
+<!--                    <lecho.lib.hellocharts.view.PieChartView-->
+<!--                        android:id="@+id/employee_pie_chart"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent" />-->
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/employee_pie_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

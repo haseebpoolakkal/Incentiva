@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminMonthHistory">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/admin_history_month_spinner_layout"
+        android:layout_margin="10dp"
+        android:padding="10dp">
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/admin_history_month_pick_spinner"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/admin_history_month_recycler"
+        android:layout_below="@id/admin_history_month_spinner_layout"
+        android:background="@color/white"
+        android:layout_marginBottom="45dp"/>
+
+    <!--            Animation Starts Here-->
+    <RelativeLayout
+        android:id="@+id/admin_history_month_progress_animation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/admin_history_month_spinner_layout">
+
+        <RelativeLayout
+            android:id="@+id/admin_history_month_card1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shine_background">
+
+            <ImageView
+                android:id="@+id/admin_history_month_shine1"
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginTop="-20dp"
+                android:rotation="30"
+                android:src="@drawable/shine" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/admin_history_month_card2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/admin_history_month_card1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shine_background">
+
+            <ImageView
+                android:id="@+id/admin_history_month_shine2"
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginTop="-20dp"
+                android:rotation="30"
+                android:src="@drawable/shine" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/admin_history_month_card3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/admin_history_month_card2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shine_background">
+
+            <ImageView
+                android:id="@+id/admin_history_month_shine3"
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginTop="-20dp"
+                android:rotation="30"
+                android:src="@drawable/shine" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/admin_history_month_card4"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/admin_history_month_card3"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shine_background">
+
+            <ImageView
+                android:id="@+id/admin_history_month_shine4"
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginTop="-20dp"
+                android:rotation="30"
+                android:src="@drawable/shine" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/admin_history_month_card5"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/admin_history_month_card4"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shine_background">
+
+            <ImageView
+                android:id="@+id/admin_history_month_shine5"
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginTop="-20dp"
+                android:rotation="30"
+                android:src="@drawable/shine" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/admin_history_month_card6"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/admin_history_month_card5"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shine_background">
+
+            <ImageView
+                android:id="@+id/admin_history_month_shine6"
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginTop="-20dp"
+                android:rotation="30"
+                android:src="@drawable/shine" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/admin_history_month_card7"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/admin_history_month_card6"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shine_background">
+
+            <ImageView
+                android:id="@+id/admin_history_month_shine7"
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginTop="-20dp"
+                android:rotation="30"
+                android:src="@drawable/shine" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

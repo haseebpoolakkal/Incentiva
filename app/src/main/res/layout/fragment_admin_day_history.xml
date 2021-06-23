@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminDayHistory">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/admin_history_day_datePicker_layout">
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/admin_history_day_datePicker_icon"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_date_range_black_24dp"/>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/admin_history_day_recycler"
+        android:layout_below="@id/admin_history_day_datePicker_layout"
+        android:background="@color/white"
+        android:layout_marginBottom="45dp"/>
+
+
+</RelativeLayout>

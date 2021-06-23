@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".Forgot">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/forgot_container"
+                android:layout_margin="10dp"
+                android:layout_centerInParent="true"
+                android:padding="16dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/forgot_logo_layout"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginTop="80dp"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_right_triangle_white_24dp"
+                        android:rotation="180"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/logo_left"/>
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_right_triangle_24dp"
+                        android:rotation="90"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/logo_right"/>
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/splash_text1"
+                        android:layout_below="@id/logo_left"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/kaniyadath_logo_text"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/forgot_entry_layout"
+                    android:layout_below="@id/forgot_logo_layout"
+                    android:layout_marginTop="50dp"
+                    android:padding="5dp">
+
+                    <EditText
+                        android:id="@+id/forgot_email"
+                        android:layout_width="370dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:hint="@string/Email_enter"
+                        android:textColorHint="@color/text_color_accent"
+                        android:inputType="textEmailAddress"
+                        android:padding="10dp"
+                        android:textColor="@color/text_color_primary" />
+
+                    <Button
+                        android:id="@+id/forgot_button"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/forgot_email"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
+                        android:background="@color/text_color_accent"
+                        android:text="Sent Reset Link"
+                        android:textColor="@color/button_text"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/forgot_progress"
+                        android:layout_below="@id/forgot_button"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30dp"/>
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

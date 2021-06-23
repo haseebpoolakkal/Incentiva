@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/add_inct_layout"
+    tools:context=".AdminAddInsentive">
+
+    <RelativeLayout
+        android:id="@+id/add_inst_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/toolbar_design_primary"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/add_inct_back_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            app:srcCompat="@drawable/ic_arrow_back_white_24dp" />
+
+        <TextView
+            android:id="@+id/add_inst_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/add_inct_back_button"
+            android:textColor="@color/toolbar_text"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/add_inst_toolbar_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:textColor="@color/toolbar_text"
+            android:textSize="18dp"
+            tools:text="50000" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/add_inst_toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/add_inst_top_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="16dp">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/admin_add_incentive_name_spinner"
+                    android:layout_marginTop="10dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_inct_type_spinner_layout"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/admin_add_incentive_name_spinner">
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/add_inst_type_spinner"
+                        android:layout_toLeftOf="@id/add_inct_percent_text"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/add_inct_percent_text"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_color_bg"
+                        android:textSize="15dp"
+                        tools:text="10 per/unit"/>
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/add_inct_bill_number"
+                    android:layout_below="@id/add_inct_type_spinner_layout"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerVertical="true"
+                    android:hint="@string/add_bill_no_text"
+                    android:textColor="@color/edit_text_color"
+                    android:textSize="18dp" />
+
+                <EditText
+                    android:id="@+id/sell_amount"
+                    android:layout_below="@id/add_inct_bill_number"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerVertical="true"
+                    android:inputType="number"
+                    android:textColor="@color/edit_text_color"
+                    android:textSize="18dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/add_inst_bottom_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/add_inst_top_container"
+                android:layout_margin="10dp"
+                android:padding="16dp">
+
+                <Button
+                    android:id="@+id/add_inct_add_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="30dp"
+                    android:background="@drawable/button_design"
+                    android:text="@string/add"
+                    android:textColor="@color/button_text" />
+
+                <ProgressBar
+                    android:id="@+id/add_inct_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/add_inct_add_button"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

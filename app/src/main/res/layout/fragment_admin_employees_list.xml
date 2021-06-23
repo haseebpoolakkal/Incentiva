@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AdminEmployeesFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/users_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_design_primary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/users_toolbar"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="50dp"
+        android:background="@color/white" />
+
+    <!--            Animation Starts Here-->
+    <RelativeLayout
+        android:id="@+id/employee_progress_animation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/users_toolbar">
+
+        <RelativeLayout
+            android:id="@+id/employee_card1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shine_background">
+
+            <ImageView
+                android:id="@+id/employee_shine1"
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginTop="-20dp"
+                android:rotation="30"
+                android:src="@drawable/shine" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/employee_card2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/employee_card1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shine_background">
+
+            <ImageView
+                android:id="@+id/employee_shine2"
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginTop="-20dp"
+                android:rotation="30"
+                android:src="@drawable/shine" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/employee_card3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/employee_card2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shine_background">
+
+            <ImageView
+                android:id="@+id/employee_shine3"
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginTop="-20dp"
+                android:rotation="30"
+                android:src="@drawable/shine" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/employee_card4"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/employee_card3"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shine_background">
+
+            <ImageView
+                android:id="@+id/employee_shine4"
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginTop="-20dp"
+                android:rotation="30"
+                android:src="@drawable/shine" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/employee_card5"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/employee_card4"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shine_background">
+
+            <ImageView
+                android:id="@+id/employee_shine5"
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginTop="-20dp"
+                android:rotation="30"
+                android:src="@drawable/shine" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/employee_card6"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/employee_card5"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shine_background">
+
+            <ImageView
+                android:id="@+id/employee_shine6"
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginTop="-20dp"
+                android:rotation="30"
+                android:src="@drawable/shine" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/employee_card7"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/employee_card6"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shine_background">
+
+            <ImageView
+                android:id="@+id/employee_shine7"
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginTop="-20dp"
+                android:rotation="30"
+                android:src="@drawable/shine" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

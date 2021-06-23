@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/about_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/about"
+        android:textColor="@color/text_color_primary"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/about_logo_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/about_heading"
+        android:layout_centerHorizontal="true"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/logo_left"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:rotation="180"
+            android:src="@drawable/ic_right_triangle_white_24dp" />
+
+        <ImageView
+            android:id="@+id/logo_right"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:rotation="90"
+            android:src="@drawable/ic_right_triangle_24dp" />
+
+        <ImageView
+            android:id="@+id/splash_text1"
+            android:layout_width="55dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/logo_left"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/kaniyadath_logo_text" />
+
+        <RelativeLayout
+            android:id="@+id/version_code_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/splash_text1"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/version_code_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Version : "
+                android:textColor="@color/text_color_accent" />
+
+            <TextView
+                android:id="@+id/version_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/version_code_text"
+                android:textColor="@color/text_color_accent"
+                tools:text="1.2.0" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/about_details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/about_logo_layout"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/about_t1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="Developed By:"
+            android:textColor="@color/text_color_accent" />
+
+        <ImageView
+            android:id="@+id/about_t2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/about_t1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/general_logo_white"/>
+
+        <TextView
+            android:id="@+id/about_t3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_t2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="AzeTech"
+            android:textColor="@color/text_color_primary" />
+
+        <TextView
+            android:id="@+id/about_t4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_t3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="haseebpoolakkal@gmail.com"
+            android:textColor="@color/text_color_primary" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
